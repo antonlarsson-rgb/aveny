@@ -8,17 +8,13 @@ export function Hero() {
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60 z-10" />
 
-      {/* Background image placeholder */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/hero.jpg')",
-          filter: "brightness(0.7)",
-        }}
+      {/* Background image */}
+      <img
+        src="/hero.jpg"
+        alt="Kvinna med naturliga lockar"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ filter: "brightness(0.7)" }}
       />
-
-      {/* Fallback gradient if no image */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#2C2C2C] via-[#3D3229] to-[#1A1A1A]" />
 
       <div className="relative z-20 text-center px-6 max-w-3xl mx-auto">
         <motion.p

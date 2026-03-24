@@ -21,12 +21,12 @@ export function ProductCard({ product, index }: ProductCardProps) {
     >
       {/* Image */}
       <div className="relative aspect-[3/4] bg-[#F0EEEB] overflow-hidden mb-4">
-        {/* Placeholder with brand initial */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-6xl font-light text-[#D4D0CC]">
-            {product.brand[0]}
-          </span>
-        </div>
+        <img
+          src={product.image}
+          alt={`${product.brand} ${product.name}`}
+          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+        />
 
         {/* Badge */}
         {product.badge && (

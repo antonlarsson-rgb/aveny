@@ -15,11 +15,11 @@ export function About() {
             transition={{ duration: 0.7 }}
             className="aspect-[4/5] bg-[#F0EEEB] relative overflow-hidden"
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-8xl font-light text-[#D4D0CC] tracking-[0.3em]">
-                A
-              </span>
-            </div>
+            <img
+              src="/products/oil.jpg"
+              alt="AVENY hårvårdsprodukter"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           </motion.div>
 
           {/* Text */}

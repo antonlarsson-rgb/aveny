@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react";
+import { Star } from "lucide-react";
 
 export function Footer() {
   return (
@@ -70,7 +70,7 @@ export function Footer() {
               href="#"
               className="inline-flex items-center gap-2 text-sm text-[#1A1A1A] hover:text-[#D4A574] transition-colors"
             >
-              <Instagram size={16} strokeWidth={1.5} />
+              <Star size={16} strokeWidth={1.5} />
               @aveny.hair
             </a>
           </div>

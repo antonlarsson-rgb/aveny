@@ -1,45 +1,34 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export function About() {
   return (
-    <section id="om-oss" className="bg-white">
-      <div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+    <section id="om-oss" className="bg-[#FAF8F4]">
+      <div className="max-w-[1400px] mx-auto px-8 py-28">
+        <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="aspect-[4/5] bg-[#F0EEEB] relative overflow-hidden"
-          >
+          <div className="aspect-[4/5] bg-[#F0EEEB] relative overflow-hidden">
             <img
               src="/products/oil.jpg"
               alt="AVENY hårvårdsprodukter"
               className="absolute inset-0 w-full h-full object-cover"
             />
-          </motion.div>
+          </div>
 
           {/* Text */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="space-y-8"
-          >
+          <div className="space-y-10">
             <div>
-              <p className="text-[#D4A574] text-xs tracking-[0.4em] uppercase mb-3">
-                Vår filosofi
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-light tracking-tight leading-snug">
-                Hår som ser ut som dig — bara bättre
+              <h2 className="font-[family-name:var(--font-cormorant)] text-4xl sm:text-5xl font-light leading-[1.15] mb-6">
+                Hår som ser ut
+                <br />
+                som <em>dig</em>
               </h2>
             </div>
 
-            <div className="space-y-4 text-[#6B6B6B] leading-relaxed">
+            <blockquote className="border-l-2 border-[#8B9A7E] pl-6 py-2">
+              <p className="font-[family-name:var(--font-cormorant)] text-xl sm:text-2xl font-light italic text-[#717171] leading-relaxed">
+                &ldquo;Det vackraste du kan bära är att vara dig själv.&rdquo;
+              </p>
+            </blockquote>
+
+            <div className="space-y-5 text-[15px] text-[#717171] leading-[1.8]">
               <p>
                 Vi startade AVENY för att vi var trötta på att söka efter
                 hårvårdsprodukter som faktiskt fungerar för lockigt, afro och
@@ -49,21 +38,18 @@ export function About() {
               <p>
                 Idag handplockar vi varje produkt i vårt sortiment. Vi testar
                 allt själva, läser ingredienslistor och väljer bara det som
-                levererar resultat. Inga kompromisser.
-              </p>
-              <p>
-                Från Mielles rosmarinolja till K18:s molekylära reparation — vi
-                har samlat det bästa på ett ställe. För ditt hår förtjänar det.
+                levererar resultat. Från Mielles rosmarinolja till K18:s
+                molekylära reparation.
               </p>
             </div>
 
             <a
               href="#produkter"
-              className="inline-block bg-[#1A1A1A] text-white px-8 py-3.5 text-xs tracking-[0.15em] uppercase hover:bg-[#D4A574] transition-colors duration-300"
+              className="inline-block text-[13px] tracking-[0.1em] text-[#333333] border-b border-[#333333] pb-1 hover:border-[#717171] hover:text-[#717171] transition-colors duration-300"
             >
               Utforska sortimentet
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,27 +1,16 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export function Newsletter() {
   return (
-    <section className="bg-[#2C2C2C] text-white">
-      <div className="max-w-7xl mx-auto px-6 py-24">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="max-w-xl mx-auto text-center"
-        >
-          <p className="text-[#D4A574] text-xs tracking-[0.4em] uppercase mb-3">
-            Nyhetsbrev
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-light tracking-tight mb-4">
-            Få 10% på första köpet
+    <section id="kontakt" className="bg-[#FFFEF2] border-t border-[#E5E2DC]">
+      <div className="max-w-[1400px] mx-auto px-8 py-28">
+        <div className="max-w-lg mx-auto text-center">
+          <h2 className="font-[family-name:var(--font-cormorant)] text-3xl sm:text-4xl font-light mb-4">
+            Håll dig uppdaterad
           </h2>
-          <p className="text-white/60 text-sm leading-relaxed mb-8">
-            Prenumerera på vårt nyhetsbrev för exklusiva erbjudanden,
-            hårvårdstips och nyheter direkt i din inbox.
+          <p className="text-[14px] text-[#717171] leading-relaxed mb-10">
+            Prenumerera för exklusiva erbjudanden, hårvårdstips och nyheter.
+            Få 10 % på din första beställning.
           </p>
 
           <form
@@ -31,20 +20,20 @@ export function Newsletter() {
             <input
               type="email"
               placeholder="Din e-postadress"
-              className="flex-1 bg-white/10 border border-white/20 px-5 py-3.5 text-sm placeholder:text-white/40 focus:outline-none focus:border-[#D4A574] transition-colors"
+              className="flex-1 border-b border-[#E5E2DC] bg-transparent px-1 py-3 text-[14px] placeholder:text-[#B5B0A8] focus:outline-none focus:border-[#333333] transition-colors"
             />
             <button
               type="submit"
-              className="bg-[#D4A574] text-white px-8 py-3.5 text-xs tracking-[0.15em] uppercase hover:bg-[#C49464] transition-colors duration-300 whitespace-nowrap"
+              className="bg-[#333333] text-white px-8 py-3 text-[12px] tracking-[0.1em] uppercase hover:bg-[#4A5548] transition-colors duration-300"
             >
               Prenumerera
             </button>
           </form>
 
-          <p className="text-white/30 text-[10px] mt-4">
+          <p className="text-[11px] text-[#B5B0A8] mt-6">
             Genom att prenumerera godkänner du vår integritetspolicy.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

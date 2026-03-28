@@ -1,55 +1,24 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { Truck, Leaf, Heart, RotateCcw } from "lucide-react";
-
-const features = [
-  {
-    icon: Truck,
-    title: "Fri frakt",
-    description: "På alla ordrar över 499 kr",
-  },
-  {
-    icon: Leaf,
-    title: "Clean beauty",
-    description: "Noggrant utvalda ingredienser",
-  },
-  {
-    icon: Heart,
-    title: "Expertval",
-    description: "Handplockade för din hårtyp",
-  },
-  {
-    icon: RotateCcw,
-    title: "Öppet köp",
-    description: "14 dagars ångerrätt",
-  },
-];
-
 export function Features() {
+  const values = [
+    "Fri frakt över 499 kr",
+    "Clean beauty",
+    "Handplockade varumärken",
+    "14 dagars öppet köp",
+  ];
+
   return (
-    <section className="border-y border-[#E8E6E3] bg-white">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
-          {features.map((feature, i) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="text-center"
-            >
-              <feature.icon
-                size={24}
-                strokeWidth={1}
-                className="mx-auto mb-4 text-[#D4A574]"
-              />
-              <h3 className="text-sm font-medium tracking-wide mb-1">
-                {feature.title}
-              </h3>
-              <p className="text-xs text-[#6B6B6B]">{feature.description}</p>
-            </motion.div>
+    <section className="border-y border-[#E5E2DC]">
+      <div className="max-w-[1400px] mx-auto px-8 py-6">
+        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-3">
+          {values.map((value, i) => (
+            <span key={i} className="flex items-center gap-4">
+              <span className="text-[12px] tracking-[0.1em] text-[#717171] uppercase">
+                {value}
+              </span>
+              {i < values.length - 1 && (
+                <span className="hidden sm:block w-[1px] h-3 bg-[#E5E2DC]" />
+              )}
+            </span>
           ))}
         </div>
       </div>
